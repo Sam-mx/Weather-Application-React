@@ -1,5 +1,7 @@
 # Weather Application
 
+<a href="https://sam-weather-app.vercel.app/" target="_blank">Sam's Live Demo</a>
+
 ## Description
 
 Create a Weather Application with React with API.
