@@ -42,7 +42,7 @@ export const StateContextProvider = ({ children }) => {
     }
 
     useEffect(() => {
-       // fetchWeather()
+        fetchWeather()
     }, [place])
 
     useEffect(() => {
