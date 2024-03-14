@@ -31,6 +31,20 @@ function App() {
       </nav>
       
       <BackgroundLayout></BackgroundLayout>
+
+      <main className='w-full flex flex-wrap gap-8 py-4 px-[10%] items-center justify-center'>
+        <WeatherCard
+          place={thisLocation}
+          windspeed={weather.wspd}
+          humidity={weather.humidity}
+          temperature={weather.temp}
+          heatIndex={weather.heatindex}
+          iconString={weather.conditions}
+          conditions={weather.conditions}
+        />
+
+       
+      </main>
     </div>
   )
 }
