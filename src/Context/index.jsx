@@ -36,7 +36,7 @@ export const StateContextProvider = ({ children }) => {
             setWeather(thisData.values[0])
         } catch (e) {
             console.error(e);
-            // if the api throws error.
+            // if the API throws error.
             alert('This place does not exist')
         }
     }
