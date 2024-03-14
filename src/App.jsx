@@ -17,7 +17,7 @@ function App() {
   return (
     <div className='w-full h-screen text-white px-8'>
       <nav className='w-full p-3 flex justify-between items-center'>
-        <h1 className='font-bold tracking-wide text-3xl'>Weather Application</h1>
+        <h1 className='font-bold tracking-wide text-3xl'>Weather Application <span className='text-blue-700'>by Sam</span></h1>
           <div className='bg-white w-[15rem] overflow-hidden shadow-2xl rounded flex items-center p-2 gap-2'>
             <img src={search} alt="search" className='w-[1.5rem] h-[1.5rem]' />
 
@@ -43,7 +43,21 @@ function App() {
           conditions={weather.conditions}
         />
 
-       
+        <div className='flex justify-center gap-8 flex-wrap w-[60%]'>
+          {
+            values?.slice(1, 7).map(curr => {
+              return (
+                <MiniCard
+                  key={curr.datetime}
+                  time={curr.datetime}
+                  temp={curr.temp}
+                  iconString={curr.conditions}
+                />
+              )
+            })
+          }
+        </div>
+
       </main>
     </div>
   )
